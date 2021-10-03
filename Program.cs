@@ -58,7 +58,6 @@ namespace TryingDapper
                     });
 
                 var pizzas = connection.Query<Pizza>(@"select * from pizza");
-
                 Console.WriteLine(pizzas.Count());
 
                 var GROUP_BY_SIZE = @"select size as grouping, sum(price) as total from pizza group by size";
